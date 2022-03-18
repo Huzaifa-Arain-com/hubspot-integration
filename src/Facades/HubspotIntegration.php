@@ -1,11 +1,11 @@
 <?php
 
-namespace Integrations\HubspotIntegration\Facades;
+namespace Markhor\HubspotIntegration\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Integrations\HubspotIntegration\HubspotIntegration
+ * @see \Markhor\HubspotIntegration\HubspotIntegration
  */
 class HubspotIntegration extends Facade
 {

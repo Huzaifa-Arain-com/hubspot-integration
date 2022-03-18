@@ -1,11 +1,7 @@
 {
-    "name": "integrations/hubspot-integration",
+    "name": "markhor/hubspot-integration",
     "description": "This is my package hubspot-integration",
-    "keywords": [
-        "integrations",
-        "laravel",
-        "hubspot-integration"
-    ],
+    "keywords": [],
     "homepage": "https://github.com/integrations/hubspot-integration",
     "license": "MIT",
     "authors": [
@@ -16,13 +12,16 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^7.2.5|^8.0",
+        "hubspot/api-client": "^5.1",
+        "hubspot/hubspot-php": "^4.0",
+        "illuminate/contracts": "^7.0|^8.0|^9.0",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^9.0"
+        "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
-        "nunomaduro/collision": "^6.0",
-        "orchestra/testbench": "^7.0",
+        "nunomaduro/collision": "^5.0",
+        "orchestra/testbench": "^6.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
         "phpunit/phpunit": "^9.5",
@@ -30,13 +29,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Integrations\\HubspotIntegration\\": "src",
-            "Integrations\\HubspotIntegration\\Database\\Factories\\": "database/factories"
-        }
+            "Markhor\\HubspotIntegration\\": "src",
+            "Markhor\\HubspotIntegration\\Database\\Factories\\": "database/factories",
+            "Markhor\\HubspotIntegration\\Database\\Seeds\\": "database/seeds"
+        },
+        "files": [
+            "src/Helpers/hubspot-integration.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Integrations\\HubspotIntegration\\Tests\\": "tests"
+            "Markhor\\HubspotIntegration\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,15 +48,18 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Integrations\\HubspotIntegration\\HubspotIntegrationServiceProvider"
+                "Markhor\\HubspotIntegration\\HubspotIntegrationServiceProvider"
             ],
             "aliases": {
-                "HubspotIntegration": "Integrations\\HubspotIntegration\\Facades\\HubspotIntegration"
+                "HubspotIntegration": "Markhor\\HubspotIntegration\\Facades\\HubspotIntegration"
             }
         }
     },

@@ -1,0 +1,4 @@
+Route::get('companies', [App\Http\Controllers\DataTableController::class, 'companies'])->name('companies');
+Route::get('contacts', [App\Http\Controllers\DataTableController::class, 'contacts'])->name('contacts');
+Route::get('products', [App\Http\Controllers\DataTableController::class, 'products'])->name('products');
+Route::get('deals', [App\Http\Controllers\DataTableController::class, 'deals'])->name('deals');

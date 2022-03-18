@@ -1,5 +1,5 @@
 <?php
 
-use Integrations\HubspotIntegration\Tests\TestCase;
+use Markhor\HubspotIntegration\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

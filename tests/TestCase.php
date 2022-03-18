@@ -1,10 +1,10 @@
 <?php
 
-namespace Integrations\HubspotIntegration\Tests;
+namespace Markhor\HubspotIntegration\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Integrations\HubspotIntegration\HubspotIntegrationServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
